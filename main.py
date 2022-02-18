@@ -43,5 +43,5 @@ if __name__ == "__main__":
     model.fit(x=trainset[0],
               y=trainset[1],
               validation_data=validset,
-              epochs=30,
-              batch_size=4)
+              epochs=100,
+              batch_size=8)

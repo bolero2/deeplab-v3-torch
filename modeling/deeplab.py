@@ -229,7 +229,7 @@ class DeepLab(nn.Module):
 
             if valid_loss < self.best_valid:
                 torch.save(self, os.path.join(self.save_dir, "best.pt"))
-        torch.save(self, os.path.join(self.save_dir, "last.pt"))
+            torch.save(self, os.path.join(self.save_dir, "last.pt"))
 
     def evaluate(self, model, dataloader, criterion, evaluator, cfg=None):
         is_cuda = torch.cuda.is_available()
@@ -286,17 +286,6 @@ class DeepLab(nn.Module):
         # print('Loss: %.3f' % valid_loss)
 
         return (valid_loss, Acc, mIoU)
-
-        # new_pred = mIoU
-        # if new_pred > self.best_pred:
-        #     is_best = True
-        #     self.best_pred = new_pred
-        #     self.saver.save_checkpoint({
-        #         'epoch': epoch + 1,
-        #         'state_dict': self.model.module.state_dict(),
-        #         'optimizer': self.optimizer.state_dict(),
-        #         'best_pred': self.best_pred,
-        #     }, is_best)
 
     def predict(self, test_images, use_cpu=False):
         cmap = self.get_colormap(256).tolist()

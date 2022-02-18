@@ -44,6 +44,6 @@ test:
   freeze_bn: False
 
 DATASET:
-  root_path: "/path/to/root_dir"
-  image_path: "/path/to/root_dir/images"
-  annot_path: "/path/to/root_dir/annotations"
+  root_path: "/home/gpuadmin/dataset/VOCsegmentation"
+  image_path: "/home/gpuadmin/dataset/VOCsegmentation/images"
+  annot_path: "/home/gpuadmin/dataset/VOCsegmentation/semantic_annotations"
