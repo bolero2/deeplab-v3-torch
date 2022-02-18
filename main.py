@@ -27,7 +27,6 @@ if __name__ == "__main__":
     print("DATASET --- Train: {} | Valid: {} | Test: {}".format(len(train_bundle), len(valid_bundle), len(test_bundle)))
 
     trainset, validset, testset = [[], []], [[], []], [[], []]          # [ [image-list], [label-list] ]
-    print(train_bundle)
 
     for elem in train_bundle:
         trainset[0].append(elem[0])

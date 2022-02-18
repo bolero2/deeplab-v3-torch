@@ -1,5 +1,5 @@
 nc: 1                     # number of classes
-classes: 'classes.txt'    # classes txt file
+classes: 'class.txt'    # classes txt file
 ch: 3                     # model input channel value
 
 train:
@@ -44,6 +44,6 @@ test:
   freeze_bn: False
 
 DATASET:
-  root_path: "/Users/bolero/dc/dataset/VOCdevkit-dc/VOCsegmentation"
-  image_path: "/Users/bolero/dc/dataset/VOCdevkit-dc/VOCsegmentation/images"
-  annot_path: "/Users/bolero/dc/dataset/VOCdevkit-dc/VOCsegmentation/semantic_annotations"
+  root_path: "/path/to/root_dir"
+  image_path: "/path/to/root_dir/images"
+  annot_path: "/path/to/root_dir/annotations"
