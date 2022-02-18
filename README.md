@@ -1,5 +1,6 @@
 # deeplab-v3-torch
-Easy-to-use VGGNet
+Easy-to-use DeepLab-V3  
+original repository : https://github.com/jfzhang95/pytorch-deeplab-xception
 
 
 ## Preparation
