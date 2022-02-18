@@ -119,7 +119,7 @@ class DeepLab(nn.Module):
                                 yield p
 
     # @TODO
-    def fit(self, x, y, validation_data, epochs=150, batch_size=8, callbacks=[]):
+    def fit(self, x, y, validation_data, epochs=150, batch_size=8):
         is_cuda = torch.cuda.is_available()
         _device = torch.device('cuda') if is_cuda else torch.device('cpu')
         self._device = _device
