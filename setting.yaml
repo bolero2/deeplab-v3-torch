@@ -1,0 +1,49 @@
+nc: 1                     # number of classes
+classes: 'classes.txt'    # classes txt file
+ch: 3                     # model input channel value
+
+train:
+  backbone: 'resnet'
+  out_stride: 16
+  dataset: 'pascal'
+  use_sbd: True
+  workers: 4
+  base_size: 513
+  crop_size: 513
+  sync_bn: None
+  freeze_bn: False
+  loss_type: 'ce'   # 'ce' or 'focal'
+  start_epoch: 0
+  use_balanced_weights: False
+  lr: 7e-3
+  lr_scheduler: 'poly'
+  momentum: 0.9
+  weight_decay: 5e-4
+  nesterov: False
+  no_cuda: False
+  gpu_ids: 0
+  seed: 1
+  resume: None
+  checkname: None
+  ft: False
+  eval_interval: 1
+  no_val: False
+  exp: 'run'
+
+test:
+  in_path: '/path/to/image.jpg'
+  out_path: '/path/to/save'
+  backbone: 'resnet'    # resnet, xception, drn, mobilenet
+  ckpt: 'deeplab-resnet.pth'
+  out_stride: 16
+  no_cuda: True
+  gpu_ids: 0
+  dataset: 'pascal'
+  crop_size: 513
+  sync_bn: None
+  freeze_bn: False
+
+DATASET:
+  root_path: "/Users/bolero/dc/dataset/VOCdevkit-dc/VOCsegmentation"
+  image_path: "/Users/bolero/dc/dataset/VOCdevkit-dc/VOCsegmentation/images"
+  annot_path: "/Users/bolero/dc/dataset/VOCdevkit-dc/VOCsegmentation/semantic_annotations"
